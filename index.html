@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme Simply Me</title>
+  <title>HTML and CSS</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -14,7 +14,7 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" id="top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -22,20 +22,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">CSS</a>
+      <p class="navbar-brand">HTML and CSS</p>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">&lt;div&gt;</a></li>
-        <li><a href="#">&lt;span&gt;</a></li>
-        <li><a href="#">&lt;&gt;</a></li>
+        <li><a href="#div">&lt;div&gt;</a></li>
+        <li><a href="#span">&lt;span&gt;</a></li>
+        <li><a href="#a">&lt;a&gt;</a></li>
+        <li><a href="#css">CSS</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- First Container -->
-<div class="container-fluid bg-1 text-center">
+<div class="container-fluid bg-1 text-center" id="div">
   <h3 class="margin">&lt;div&gt;</h3>
   <!--<img src="bird.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">-->
   <h3>The &lt;div&gt; tag defines a division or a section in an HTML document. The &lt;div&gt; tag is used as a container 
@@ -44,7 +45,7 @@
                   the &lt;div&gt; tag! It's even possible to make a html document consisting of only &lt;div&gt; tags.</h3>
 </div>
 
-<div class="container-fluid bg-2 text-center">
+<div class="container-fluid bg-2 text-center" id="span">
   <h3 class="margin">&lt;span&gt;</h3>
   <!--<img src="bird.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">-->
   <h3>The &lt;span&gt; tag is an inline container used to mark up a part of a text, or a part of a document. The &lt;span&gt; 
@@ -54,10 +55,15 @@
   <h3><span class="glyphicon glyphicon-search"></span> this search icon is inserted using &lt;span&gt; tags!</h3>
 </div>
 
-<div class="container-fluid bg-1 text-center">
-  <h3 class="margin">&lt;&gt;</h3>
+<div class="container-fluid bg-3 text-center" id="a">
+  <h3 class="margin">&lt;a&gt;</h3>
   <!--<img src="bird.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">-->
-  <h3>????</h3>
+  <h3>The &lt;a&gt; tag defines a hyperlink, which is used to link from one page to another. The most important 
+          attribute of the &lt;a&gt; element is the href attribute, which indicates the link's destination. By default, 
+              links will appear as follows in all browsers: An unvisited link is underlined and blue; A visited link 
+              is underlined and purple; An active link is underlined and red.</h3>
+  <h3>Hyperlinks can also link to a specific section of a page, for instance, <a href="#top">this one</a> which brings you to the 
+            top of the page.</h3>
 </div>
 
 <!-- Second Container -->
@@ -70,27 +76,46 @@
 </div>-->
 
 <!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center">    
-  <h3 class="margin">CSS knifi</h3><br>
+<div class="container-fluid bg-1 text-center" id="css">    
+  <h3 class="margin2">CSS tricks</h3><br>
   <div class="row">
     <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <h3>mix-blend-mode</h3>
+      <p>The <span class="highl">mix-blend-mode</span> property specifies how an element's content should blend 
+          with its direct parent background.</p>
+      <p>Example: The same image with it's <span class="highl">mix-blend-mode</span> property set to 
+          <span class="highl">normal</span> and <span class="highl">darken.</span></p>
+      <img src="images\possum.png" class="img-responsive margin column-img" alt="Image">
+      <img src="images\possum.png" class="img-responsive margin blend-img column-img" alt="Image">
     </div>
     <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <h3>clip-path</h3>
+      <p>The <span class="highl">clip-path</span> property in CSS allows you to specify a specific region of an 
+          element to display, with the rest being hidden (or “clipped”) away.</p>
+      <p>Example: An image with no clip path, and the same image with it's 
+          <span class="highl">clip-path</span> set to <span class="highl">ellipse(45% 45% at 50% 50%).</span></p>
+      <img src="images\possum.png" class="img-responsive margin column-img" alt="Image">
+      <img src="images\possum.png" class="img-responsive margin clip-img column-img" alt="Image">
     </div>
     <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <h3>:hover Selector</h3>
+      <p>The <span class="highl">:hover</span> selector is used to select elements when you mouse over them. While it is
+      most commonly used on links, it can be used on any element.</p>
+      <p>Example: Hover over the sleeping possum to wake him up!</p>
+      <div class="hover-possum">
+      <img src="images\possum.png" class="img-responsive" alt="Image">
+      <img src="images\possum_awake.png" class="img-responsive img-top" alt="Image">
+      </div>
+      
     </div>
   </div>
 </div>
 
 <!-- Footer -->
-<footer class="container-fluid bg-4 text-center">
-  <p>Roberts Niks Riekstiņš 12.b</p> 
+<footer class="container-fluid bg-4 text-center" style="padding-bottom: 60px;">
+  <p>Roberts Niks Riekstiņš 12.b</p>
+  <p>All images of cute possums found somewhere on Twitter.</p>
+  <p style="margin-bottom: 0px;">2021</p>
 </footer>
 
 </body>
