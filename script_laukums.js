@@ -1,21 +1,3 @@
-var klik=true;
-function mainaBildi(elemn){
-    //if (klik) document.getElementById("poga").src="images/possum_awake.png";
-    //else document.getElementById("poga").src="images/possum.png";
-    if (klik) elemn.src="images/possum_awake.png";
-    else elemn.src="images/possum.png";
-    klik=!klik;
-}
-
-function maina(){
-    let stils1, stils2;
-    let tt = document.getElementById("pogab");
-    stils1 = tt.style.visibility;
-    if (stils1=="visible") stils2="hidden"; else stils2="visible";
-    tt.style.visibility = stils2;
-    //setTimeout(function(){tt.style.visibility=stils1;},2000);
-}
-
 function clear() {
     var x = document.getElementsByClassName("hover-thingy");
     var i;
