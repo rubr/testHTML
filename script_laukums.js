@@ -105,6 +105,7 @@ function sajukums(){
             var x = document.getElementById(String(i+1)).getElementsByTagName('button');
             x[0].style.display = "inline";
             x[0].style.visibility = "hidden";
+            x[0].style.backgroundColor = "red";
             var xx = x[0].getElementsByTagName('span');
             xx[0].innerHTML = saraksts[i];
         }
@@ -114,10 +115,6 @@ function sajukums(){
             x[0].style.display = "inline";
             x[0].style.visibility = "hidden";
             x[0].src = "images/" + saraksts[i];
-            
-            var xxx = document.getElementById(String(i+1)).getElementsByTagName('button');
-            var xx = xxx[0].getElementsByTagName('span');
-            xx[0].innerHTML = saraksts[i]; // this is here for comparison puposes, it doesn't get displayed
         }
     }
 }
@@ -167,11 +164,21 @@ function change(idee) {
                 {
                     statu[click1] = 2;
                     statu[click2] = 2;
+                    if (type[click1] == 0)
+                    {
+                        var x = document.getElementById(String(click1+1)).getElementsByTagName('button');
+                        x[0].style.backgroundColor = "orange";
+                    }
+                    if (type[click2] == 0)
+                    {
+                        var x = document.getElementById(String(click2+1)).getElementsByTagName('button');
+                        x[0].style.backgroundColor = "orange";
+                    }
                     click = 0;
                     click1 = -1;
                     click2 = -1;
                     let win_question = true;
-                    for (let i = 0; i < len; i++)
+                    for (let i = 0; i < 2 * len; i++)
                     {
                         if (statu[i] != 2) win_question = false;
                     }
